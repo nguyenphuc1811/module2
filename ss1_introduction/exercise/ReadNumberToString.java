@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class ReadNumberToString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số để đọc");
+        System.out.print("Nhập số để đọc: ");
         int number;
         number = scanner.nextInt();
         if (number == 0) {
             System.out.println("zero");
-        } else if (number > 999) {
+        } else if (number > 999 || number < 0) {
             System.out.println("out of ability");
-        } else if (number > 0 && number <= 99) {
+        } else if (number <= 99) {
             if ((number % 100) < 20 && (number % 100) > 10) {
                 switch (number % 100) {
                     case 11:
@@ -106,8 +106,6 @@ public class ReadNumberToString {
             }
         } else {
             switch (number / 100) {
-                case 0:
-                    break;
                 case 1:
                     System.out.print("one hundred ");
                     break;
