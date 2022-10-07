@@ -6,13 +6,11 @@ import java.util.Scanner;
 public class SumLeanLine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập hàng: ");
+        System.out.print("Nhập hàng và cột vuông là : ");
         int m = Integer.parseInt(scanner.nextLine());
-        System.out.print("Nhập cột: ");
-        int n = Integer.parseInt(scanner.nextLine());
-        int[][] array = new int[m][n];
+        int[][] array = new int[m][m];
         for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 System.out.print("Nhập số vào phần tử [" + i + "][" + j + "]");
                 array[i][j] = Integer.parseInt(scanner.nextLine());
             }
@@ -23,7 +21,7 @@ public class SumLeanLine {
         }
         int sum = 0;
         for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 if (i == j || i + j == m - 1) {
                     sum += array[i][j];
                 }
