@@ -1,17 +1,16 @@
-package ss2_arayy_and_loop.exercise;
+package ss3_class_and_object_in_java.exercise;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class FindMaxNumberInArray {
+public class SumLeanLine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập hàng: ");
         int m = Integer.parseInt(scanner.nextLine());
         System.out.print("Nhập cột: ");
         int n = Integer.parseInt(scanner.nextLine());
-        double[][] array = new double[m][n];
-
+        int[][] array = new int[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("Nhập số vào phần tử [" + i + "][" + j + "]");
@@ -19,27 +18,17 @@ public class FindMaxNumberInArray {
             }
         }
         System.out.println("Mảng vừa nhập là: ");
-        for (int i = 0; i <m ; i++) {
+        for (int i = 0; i < m; i++) {
             System.out.println(Arrays.toString(array[i]));
         }
-        double max = array[0][0];
-        int mMax;
-        int nMax;
+        int sum = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (array[i][j] > max) {
-                    max = array[i][j];
+                if (i == j || i + j == m - 1) {
+                    sum += array[i][j];
                 }
             }
         }
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (array[i][j] == max) {
-                    mMax = i;
-                    nMax = j;
-                    System.out.println("Vậy số lớn nhất là " + max + " ở vị trí array[" + mMax + "][" + nMax + "]");
-                }
-            }
-        }
+        System.out.println("Tổng của đường chéo trong mảng vuông là " + sum);
     }
 }
