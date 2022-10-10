@@ -1,4 +1,4 @@
-package ss3_class_and_object_in_java.exercise;
+package ss3_method.exercise;
 
 import java.util.Arrays;
 import java.util.Scanner;
