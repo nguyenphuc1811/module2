@@ -1,4 +1,4 @@
-package ss6_inheritance.point2d_point3d;
+package ss6_inheritance.exercise.point2d_point3d;
 
 public class Point2D {
     private float x;

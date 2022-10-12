@@ -1,6 +1,5 @@
-package ss6_inheritance.point2d_point3d;
+package ss6_inheritance.exercise.point2d_point3d;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Point3D extends Point2D {
